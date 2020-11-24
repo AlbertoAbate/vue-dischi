@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- header -->
+        <header>
+            <div class="header-top">
+                <img src="./img/logo.png" alt="">
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <div class="main-top mt">
+                Filter by genre
+                <select v-model="actualGenre"
+                        @change="selectGenre"
+                >
+                    <option value="all">All</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </div>
+            <div class="dischi">
+                <ul class="cds-lista" v-if="cds.length > 0">
+                    <li class="cd" v-for="cd in cds">
+                        <div class="wrap-image">
+                            <img :src="cd.poster" :alt="cd.title">
+                        </div>
+                        <h3 class="title mt">{{ cd.title }}</h3>
+                        <div class="author mt">{{ cd.author }}</div>
+                        <div class="year mt">{{ cd.year }}</div>
+                        <div class="genre mt">{{ cd.genre }}</div>
+                        
+                    </li>
+                </ul>
+                <h3 v-else class="loader">Loading emails, please wait...</h3>
+            </div>
+        </main>
+    </div>
+
+
+
+    <!-- inclusione axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- inclusione js -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

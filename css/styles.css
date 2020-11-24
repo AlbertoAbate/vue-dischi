@@ -1,0 +1,67 @@
+/* reset generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+}
+img {
+    max-width: 100%;
+}
+.mt {
+    margin-top: 10px;
+}
+#app {
+    background-color: #1e1e31;
+}
+/* header */
+header .header-top {
+    height: 60px;
+    background-color: #2e3a46;
+}
+.header-top img {
+    width: 40px;
+    margin: 10px;
+}
+/* main */
+.cds-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 10px;
+    list-style: none;
+}
+.cd {
+    flex-basis: 165px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #2e3a46;
+}
+.title {
+    text-transform: uppercase;
+    
+}
+.title,
+.genre {
+    color: #fff;
+}
+.author,
+.year {
+    color: #5b5b5b;
+}
+.genre {
+    font-size: 10px;
+}
+/* main-top */
+.main-top {
+    text-align: center;
+    color: #fff;
+}
+select {
+    border-radius: 5px;
+}
